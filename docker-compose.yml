@@ -1,0 +1,12 @@
+version: '2'  
+services:  
+    jenkins:
+        image: jenkinsci/blueocean
+        container_name: jenkins
+        volumes: 
+            - '/var/run/docker.sock:/var/run/docker.sock'
+            - './jenkins-data:/var/jenkins_home'
+            - '"$HOME":/home'
+        environment:
+            VIRTUAL_HOST: jenkins.thomazot.com.br
+            VIRTUAL_PORT: 80
