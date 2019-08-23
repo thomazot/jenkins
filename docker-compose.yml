@@ -8,6 +8,7 @@ services:
             - './jenkins-data:/var/jenkins_home'
         environment:
             VIRTUAL_HOST: jenkins.thomazot.com.br
+            VIRTUAL_PORT: 8080
         networks:
             - nginx-proxy
 networks:
