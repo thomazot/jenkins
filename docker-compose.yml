@@ -6,7 +6,6 @@ services:
         volumes:
             - '/var/run/docker.sock:/var/run/docker.sock'
             - './jenkins-data:/var/jenkins_home'
-            - '"$HOME":/home'
         environment:
             VIRTUAL_HOST: jenkins.thomazot.com.br
         networks:
